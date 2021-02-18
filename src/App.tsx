@@ -24,6 +24,7 @@ function App() {
         </Route>
       </Switch>
       </Router>
+      {/* <Navbar/> */}
     </div>
   );
 }

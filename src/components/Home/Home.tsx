@@ -33,101 +33,67 @@ const Home = () => {
                 <div className={styles.line}></div>
 
                 <div className={styles.images}>
-                    <div>
+                    <div 
+                    onMouseDown={()=>setFilms(!Films)}
+                    onClick={()=>{history.push('/Navbar/Films')}}>
                         
-                        {Films ? (
+                      
                             
-                            <img onClick={()=>{history.push('/Navbar')}}
-                                src={filmpressed}
+                            <img 
+                                src={Films ? filmpressed:film}
                                 className={styles.ImagesComp}></img>
-
-                        ) : (
-                            
-                                <img onClick={()=>setFilms(!Films)}
-                                    src={film}
-                                    className={styles.ImagesComp}></img>
-
-                            )}
+                                 
+                      
                         <h1 className={styles.TextComp}>FILMS</h1>
                     </div>
-                    <div>
-                        {Species ? (
+                    <div 
+                    onMouseDown={()=>setSpecies(!Species)}
+                    onClick={()=>{history.push('/Navbar/Species')}}>
+                  
+                     
                             
-                                <img onClick={()=>setSpecies(!Species)}
-                                    src={speciespressed}
+                                <img  src={Species ? speciespressed:species}
                                     className={styles.ImagesComp}></img>
                            
-                        ) : (
-                               
-                                    <img onClick={()=>setSpecies(!Species)}
-                                        src={species}
-                                        className={styles.ImagesComp}></img>
-                               
-                            )}
+                       
                         <h1 className={styles.TextComp}>SPECIES</h1>
                     </div>
-                    <div>
-                        {Planets ? (
+                    <div
+                    onMouseDown={()=>setPlanets(!Planets)}
+                    onClick={()=>{history.push('/Navbar/Planets')}} >
+                       
                            
-                                <img onClick={()=>setPlanets(!Planets)}
-                                    src={planpressed}
+                                <img 
+                                    src={Planets ?planpressed:plan}
                                     className={styles.ImagesComp}></img>
-                          
-                        ) : (
-                               
-                                    <img onClick={()=>setPlanets(!Planets)}
-                                        src={plan}
-                                        className={styles.ImagesComp}></img>
-                               
-                            )}
                         <h1 className={styles.TextComp}>PLANETS</h1>
                     </div>
-                    <div>
-                        {Characters? (
+                    <div onMouseDown={()=>setCharacters(!Characters)}
+                    onClick={()=>{history.push('/Navbar/Characters')}} >
+                       
                            
                                 <img onClick={()=>setCharacters(!Characters)}
-                                    src={peoplepressed}
+                                    src={Characters ?peoplepressed:people}
                                     className={styles.ImagesComp}></img>
-                           
-                        ) : (
-                               
-                                    <img onClick={()=>setCharacters(!Characters)}
-                                        src={people}
-                                        className={styles.ImagesComp}></img>
-                               
-                            )}
                         <h1 className={styles.TextComp}>PEOPLE</h1>
                     </div>
-                    <div>
-                        {Starship ? (
+                    <div onMouseDown={()=>setStarship(!Starship)}
+                    onClick={()=>{history.push('/Navbar/Starships')}}>
+                      
                             
-                                <img onClick={()=>setStarship(!Starship)}
-                                    src={vehiclepressed}
+                                <img 
+                                    src={Starship ?vehiclepressed : vehicle}
                                     className={styles.ImagesComp}></img>
-                           
-                        ) : (
-                               
-                                    <img onClick={()=>setStarship(!Starship)}
-                                        src={vehicle}
-                                        className={styles.ImagesComp}></img>
-                                
-                            )}
+
                         <h1 className={styles.TextComp}>STARSHIP</h1>
                     </div>
-                    <div>
-                        {Vehicles ? (
+                    <div onMouseDown={()=>setVehicles(!Vehicles)}
+                    onClick={()=>{history.push('/Navbar/Vehicles')}} >
                            
-                                <img onClick={()=>setVehicles(!Vehicles)}
-                                    src={droidspressed}
+                                <img 
+                                    src={Vehicles ?droidspressed :droids}
                                     className={styles.ImagesComp}></img>
-                            
-                        ) : (
-                                
-                                    <img onClick={()=>setVehicles(!Vehicles)}
-                                        src={droids}
-                                        className={styles.ImagesComp}></img>
-                                
-                            )}
+        
                         <h1 className={styles.TextComp}>VEHICLES</h1>
                     </div>
                 </div>

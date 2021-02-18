@@ -31,39 +31,39 @@ const Navbar = () => {
           <nav className={styles.nav}>
             <ul className="list">
               <li>
-                <NavLink exact activeClassName={styles.selected} className="Films" to="/Films">FILMS</NavLink>
+                <NavLink exact activeClassName={styles.selected} className="Films" to="/Navbar/Films">FILMS</NavLink>
               </li>
               <li >
-                <NavLink activeClassName={styles.selected} className="species" to="/Species">SPECIES</NavLink>
+                <NavLink activeClassName={styles.selected} className="species" to="/Navbar/Species">SPECIES</NavLink>
               </li>
               <li>
-                <NavLink activeClassName={styles.selected} className="planets" to="/Planets">PLANETS</NavLink>
+                <NavLink activeClassName={styles.selected} className="planets" to="/Navbar/Planets">PLANETS</NavLink>
               </li>
               <li>
-                <NavLink exact activeClassName= {styles.selected} className="Character" to="/Characters">CHARACTERS</NavLink>
+                <NavLink exact activeClassName= {styles.selected} className="Character" to="/Navbar/Characters">CHARACTERS</NavLink>
               </li>
               <li >
-                <NavLink activeClassName={styles.selected} className="sshp" to="/Starships">STARSHIPS</NavLink>
+                <NavLink activeClassName={styles.selected} className="sshp" to="/Navbar/Starships">STARSHIPS</NavLink>
               </li>
               <li>
-                <NavLink activeClassName={styles.selected} className="vehi" to="/Vehicles">VEHICLES</NavLink>
+                <NavLink activeClassName={styles.selected} className="vehi" to="/Navbar/Vehicles">VEHICLES</NavLink>
               </li>
 
             </ul>
             <div className={styles.lines}></div>
 
             <Switch>
-              <Route exact path="/Films"><Films />
+              <Route exact path="/Navbar/Films"><Films />
               </Route>
-              <Route exact path="/Species"><Species />
+              <Route exact path="/Navbar/Species"><Species />
               </Route>
-              <Route exact path="/Planets"><Planets/>
+              <Route exact path="/Navbar/Planets"><Planets/>
               </Route>
-              <Route exact path="/Characters"><Characters />
+              <Route exact path="/Navbar/Characters"><Characters />
               </Route>
-              <Route exact path="/Starships"><Starships/>
+              <Route exact path="/Navbar/Starships"><Starships/>
               </Route>
-              <Route exact path="/Vehicles"><Vehicles/>
+              <Route exact path="/Navbar/Vehicles"><Vehicles/>
               </Route>
            
             </Switch>
@@ -71,8 +71,8 @@ const Navbar = () => {
 
         </Router>
 
-
-        {/* <div className={styles.line2}>
+<div className={styles.Footer}>
+        <div className={styles.line2}>
 
                 </div>
                 <div className={styles.fooo}>
@@ -85,8 +85,8 @@ const Navbar = () => {
                 <div className={styles.Foo}>
                     <img src={foologo}></img>
                     <p>TM & © Lucasfilm Ltd. All Rights Reserved</p>
-                </div> */}
-
+                </div>
+                </div>
       </div>
     </div>
   );
