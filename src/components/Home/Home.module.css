@@ -5,7 +5,7 @@
   height: 100%;
   text-align: center;
   width: 100%;
-
+ 
 }
 
 .bkg {
@@ -23,7 +23,7 @@
 .line{
     width: 700px;
     box-sizing: border-box;
-    border: 0.8px solid #1B6BA2 ;;
+    border: 0.8px solid #1B6BA2;
     margin-left: 22%;
     opacity: 0.3;
     margin-top:1%;
@@ -57,8 +57,31 @@
   
 }
 .Foo img{
-    height: 30px;
+    height: 36px;
     width: 120px;
+    margin-right:46% ;
+    margin-top: 2%;
+    
+}
+.Foo p{
+    color: #49486B;
+    font-size: 9px;
+}
+.fooo{
+    justify-content: space-between;
+    margin-left: 38%;
+    position: absolute;
+    margin-top: 2%;
+}
+.fooo h1{
+    display:inline-flex;
+   margin-left: -36px;
+    font-size: 8px;
+    color:#1B6BA2 ;
+    font-weight:500;
+    width: 140px;
+   
+  
 }
 @media (max-width:400px){
     .images {
@@ -66,5 +89,5 @@
         
   
     }
+    
 }
-

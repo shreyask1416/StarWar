@@ -15,7 +15,9 @@ import droidspressed from "../../StarWarDesign/Art Assets/Topics/droids_pressed.
 import vehicle from "../../StarWarDesign/Art Assets/Topics/vehicles_normal.png"
 import vehiclepressed from "../../StarWarDesign/Art Assets/Topics/vehicles_pressed.png"
 import foologo from "../../StarWarDesign/Art Assets/footer_logo.png"
+import {useHistory} from 'react-router-dom';
 const Home = () => {
+    let history = useHistory();
     const [Films, setFilms] = useState(false);
     const [Species, setSpecies] = useState(false);
     const [Planets, setPlanets] = useState(false);
@@ -35,7 +37,7 @@ const Home = () => {
                         
                         {Films ? (
                             
-                            <img onClick={()=>setFilms(!Films)}
+                            <img onClick={()=>{history.push('/Navbar')}}
                                 src={filmpressed}
                                 className={styles.ImagesComp}></img>
 
@@ -100,13 +102,13 @@ const Home = () => {
                         {Starship ? (
                             
                                 <img onClick={()=>setStarship(!Starship)}
-                                    src={droidspressed}
+                                    src={vehiclepressed}
                                     className={styles.ImagesComp}></img>
                            
                         ) : (
                                
                                     <img onClick={()=>setStarship(!Starship)}
-                                        src={droids}
+                                        src={vehicle}
                                         className={styles.ImagesComp}></img>
                                 
                             )}
@@ -116,13 +118,13 @@ const Home = () => {
                         {Vehicles ? (
                            
                                 <img onClick={()=>setVehicles(!Vehicles)}
-                                    src={vehiclepressed}
+                                    src={droidspressed}
                                     className={styles.ImagesComp}></img>
                             
                         ) : (
                                 
                                     <img onClick={()=>setVehicles(!Vehicles)}
-                                        src={vehicle}
+                                        src={droids}
                                         className={styles.ImagesComp}></img>
                                 
                             )}
@@ -132,9 +134,18 @@ const Home = () => {
                 <div className={styles.line2}>
 
                 </div>
+                <div className={styles.fooo}>
+                <h1>TERMS OF USE</h1>
+                    <h1>LEGAL NOTICES</h1>
+                    <h1>PRIVACY POLICY</h1>
+                    <h1>STAR WARS HELPDESK</h1>
+                    <h1>STAR WARS AT DISNEY STORE</h1>
+                </div>
                 <div className={styles.Foo}>
                     <img src={foologo}></img>
+                    <p>TM & © Lucasfilm Ltd. All Rights Reserved</p>
                 </div>
+                
             </div>
         </div>
     );

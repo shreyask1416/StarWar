@@ -1,0 +1,115 @@
+.Navbar{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  
+  }
+  
+  .bkg {
+      background: url('../../StarWarDesign/Art Assets/background.png') no-repeat center center/cover;
+      min-height: 100vh;
+      background-size:100% 100%;
+  }
+  .logostyle img{
+      height:60px;
+      width:120px;
+      margin-top:3%;
+      margin-right:3%;
+  }
+  .line{
+      width: 750px;
+      box-sizing: border-box;
+      border: 0.8px solid #1B6BA2 ;;
+      margin-left: 22%;
+      opacity: 0.3;
+      margin-top:1.6%;
+      position: absolute;
+  }
+  .lines{
+    width: 750px;
+    box-sizing: border-box;
+    border: 0.8px solid #1B6BA2 ;;
+    margin-left: 22%;
+    opacity: 0.3;
+    margin-top:-1.3%;
+    position: absolute; 
+  }
+  .nav{
+      justify-content: space-between;
+     margin-top: 1.5%;
+  }
+.selected{
+    background: rgba(0, 168, 255,.5);
+    height: 30px;
+    width: auto;
+    
+}
+  .nav li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    display: inline-flex;
+    text-decoration:none;
+   
+  }
+  .nav a{
+  
+    text-decoration:none;
+    justify-content: space-between;
+    color:white;
+    font-size: 11px;
+    margin-left: 45px;
+    font-weight: 600;
+    
+}
+ 
+  
+  .line2{
+    
+      box-sizing: border-box;
+      border: 0.8px solid #1B6BA2 ;;
+      opacity: 0.2;
+      margin-top: 20%;
+    
+  }
+  .Foo img{
+      height: 36px;
+      width: 120px;
+      margin-right:46% ;
+      margin-top: 2%;
+      
+  }
+  .Foo p{
+      color: #49486B;
+      font-size: 9px;
+  }
+  .fooo{
+      justify-content: space-between;
+      margin-left: 38%;
+      position: absolute;
+      margin-top: 2%;
+  }
+  .fooo h1{
+      display:inline-flex;
+     margin-left: -36px;
+      font-size: 8px;
+      color:#1B6BA2 ;
+      font-weight:500;
+      width: 140px;
+     
+    
+  }
+  /* @media (max-width:400px){
+      .images {
+          grid-template-columns: 1fr 1fr;
+          
+    
+      }
+      
+  } */
+  
