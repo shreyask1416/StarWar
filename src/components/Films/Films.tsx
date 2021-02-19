@@ -62,13 +62,16 @@ const Films = () => {
   
     return (
         <div className={styles.Films}>
-            <div>
-            {Details.map((item:any)=>{
-              return(
-                <h1>{item.title}</h1>
-              )
-            })}
-            </div>
+             <div>
+              {Details.map((item:any)=>{
+                return(
+  
+                  <h1>{item.title}</h1>
+  
+                )
+              })}
+             
+              </div>
            </div>
     );
 };

@@ -97,7 +97,7 @@ const Home = () => {
                         <h1 className={styles.TextComp}>VEHICLES</h1>
                     </div>
                 </div>
-                <div className={styles.line2}>
+                {/* <div className={styles.line2}>
 
                 </div>
                 <div className={styles.fooo}>
@@ -110,7 +110,7 @@ const Home = () => {
                 <div className={styles.Foo}>
                     <img src={foologo}></img>
                     <p>TM & © Lucasfilm Ltd. All Rights Reserved</p>
-                </div>
+                </div> */}
                 
             </div>
         </div>

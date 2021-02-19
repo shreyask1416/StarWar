@@ -6,6 +6,9 @@ const Species = () => {
     const [Previouspage, setprevious] = React.useState(true);
     const [Details, setDetails] = React.useState([]);
     const [lastPage, setLastPage] = React.useState(false);
+    const [prev, setPrev] =React.useState(false);
+    const [next, setNext] =React.useState(false);
+    const [loading, setLoading] = React.useState(true);
     const increaseOffset = () => {
       if (!lastPage) {
         setOffset((prev) => prev + 1);
@@ -13,11 +16,19 @@ const Species = () => {
     };
   
     const getCharcter = async () => {
+      setLoading(true);
       await fetch(`https://swapi.dev/api/species/`)
         .then((response) => response.json())
         .then((responseData) => {
           setCharacter(responseData);
+          if(responseData.previous === null) {
+            setPrev(true);
+            }
+            if(responseData.next === null) {
+            setNext(true);
+            }
           setDetails(responseData.results);
+          setLoading(false);
           // console.log(responseData);
         })
         .catch((error) => {
@@ -27,49 +38,65 @@ const Species = () => {
   
   
     const nextCharcater = async (charcter:any) => {
+      setLoading(true);
       await fetch(charcter.next)
         .then((response) => response.json())
         .then((responseData) => {
           setCharacter(responseData);
+          if(responseData.next === null) {
+            setNext(true);
+            }
+            if(responseData.prev !== null) {
+            setPrev(false);
+            }
           setDetails(responseData.results);
-          // console.log(responseData);
+          setLoading(false);
         })
         .catch((error) => {
           console.log(error);
         });
     }
     const previousCharcater = async (charcter:any) => {
+      setLoading(true);
       await fetch(charcter.previous)
         .then((response) => response.json())
         .then((responseData) => {
           setCharacter(responseData);
+          if(responseData.previous === null) {
+            setPrev(true);
+            }
+            if(responseData.next !== null) {
+            setNext(false);
+            }
           setDetails(responseData.results);
-          // console.log(responseData);
-        })
+          setLoading(false);
+                  })
         .catch((error) => {
           console.log(error);
         });
     }
-  
-  
-  
-  
-    React.useEffect(() => {
+  React.useEffect(() => {
       getCharcter();
     }, []);
     return (
         <div className={styles.Species}>
-               <div>
-            {Details.map((item:any)=>{
-              return(
-
-                <h1>{item.name}</h1>
-
-              )
-            })}
-            <button onClick={()=>previousCharcater(charcter)}>Previous</button>
-            <button onClick={()=>nextCharcater(charcter)}>Next</button>
-            </div>
+          {loading && <div className={styles.loading}>
+<h1>Loading ... </h1>
+</div>}
+             <div>
+               
+              {!loading && Details.map((item:any)=>{
+                return(
+  
+                  <h1>{item.name}</h1>
+  
+                )
+              })}
+              {!loading && <div className={styles.button}>
+{!prev? <button onClick={()=>previousCharcater(charcter)}>Previous</button> : <button className={styles.active}>Previous</button>}
+{!next? <button onClick={()=>nextCharcater(charcter)}>Next</button> : <button className={styles.active}>Next</button>}
+</div> }
+              </div>
            </div>
     );
 };
