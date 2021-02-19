@@ -2,19 +2,10 @@ import React from "react";
 import styles from "./Species.module.css"
 const Species = () => {
     const [charcter, setCharacter] = React.useState();
-    const [offset, setOffset] = React.useState(5);
-    const [Previouspage, setprevious] = React.useState(true);
     const [Details, setDetails] = React.useState([]);
-    const [lastPage, setLastPage] = React.useState(false);
     const [prev, setPrev] =React.useState(false);
     const [next, setNext] =React.useState(false);
     const [loading, setLoading] = React.useState(true);
-    const increaseOffset = () => {
-      if (!lastPage) {
-        setOffset((prev) => prev + 1);
-      }
-    };
-  
     const getCharcter = async () => {
       setLoading(true);
       await fetch(`https://swapi.dev/api/species/`)
@@ -29,7 +20,6 @@ const Species = () => {
             }
           setDetails(responseData.results);
           setLoading(false);
-          // console.log(responseData);
         })
         .catch((error) => {
           console.log(error);
