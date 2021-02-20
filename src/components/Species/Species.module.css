@@ -7,6 +7,7 @@
    opacity: 80%;
    font-family: 'Open Sans', sans-serif;
    line-height: 22px;
+   cursor:pointer;
 }
 .button {
    margin-left: 1%;

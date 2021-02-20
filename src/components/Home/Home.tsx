@@ -97,20 +97,7 @@ const Home = () => {
                         <h1 className={styles.TextComp}>VEHICLES</h1>
                     </div>
                 </div>
-                {/* <div className={styles.line2}>
-
-                </div>
-                <div className={styles.fooo}>
-                <h1>TERMS OF USE</h1>
-                    <h1>LEGAL NOTICES</h1>
-                    <h1>PRIVACY POLICY</h1>
-                    <h1>STAR WARS HELPDESK</h1>
-                    <h1>STAR WARS AT DISNEY STORE</h1>
-                </div>
-                <div className={styles.Foo}>
-                    <img src={foologo}></img>
-                    <p>TM & © Lucasfilm Ltd. All Rights Reserved</p>
-                </div> */}
+              
                 
             </div>
         </div>

@@ -59,6 +59,7 @@
     flex-direction: row;
     display: inline-flex;
     text-decoration:none;
+    
    
   }
   .nav a{
@@ -112,12 +113,48 @@
   }
   
  
-  /* @media (max-width:400px){
-      .images {
-          grid-template-columns: 1fr 1fr;
-          
-    
-      }
+  @media (max-width:500px){
+     .Navbar{
+       
+    }
+   .line{
+       margin:auto;
+       width: 100%;
+       margin-top: 3.5%;
+   }
+   .lines{
+       margin: auto;
+       width:100%;
+       margin-top:-1%;
       
-  } */
+   }
+  .nav{
+     margin-left: -25%;
+
+    
+    
+  }
+ .media{
+     /* width:600px; */
+    
+ }
+   .nav a{
+    text-decoration:none;
+    justify-content: space-between;
+    color:white;
+    display: inline-flex;
+    font-size: 10px;
+    width:auto;
+    font-weight: 600;
+    margin-left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.8;
+    overflow: auto;
+
+
+    
+}
+    
+}
+
   

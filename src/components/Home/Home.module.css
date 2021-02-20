@@ -90,11 +90,20 @@
    
   
 }
-@media (max-width:400px){
+@media (max-width:500px){
     .images {
         grid-template-columns: 1fr 1fr;
+       margin-left:22%;
+       grid-template-rows:repeat(2,80px) ;
+       grid-gap:45px;
+       margin-top: 10%;
         
   
     }
+    .line{
+        width:100%;
+        margin:auto;
+    }
+    
     
 }

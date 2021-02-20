@@ -37,11 +37,25 @@
   
 }
 
-/* @media (max-width:400px){
-    .images {
-        grid-template-columns: 1fr 1fr;
+@media (max-width:500px){
+    .line2 {
+        margin-top: -40%;
         
   
     }
+    .Foo img{
+        visibility: hidden;
+    }
+    .fooo{
+        justify-content: space-between;
+        margin-left: 12%;
+        position: absolute;
+        margin-top: 2%;
+    }
+    .fooo h1{
+        display: inline-flex;
+        font-size: 7px;
+        width: 141px;
+    }
     
-} */
+}

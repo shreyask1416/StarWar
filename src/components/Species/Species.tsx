@@ -6,6 +6,9 @@ const Species = () => {
     const [prev, setPrev] =React.useState(false);
     const [next, setNext] =React.useState(false);
     const [loading, setLoading] = React.useState(true);
+    const [detailsScreenStatus, setDetailsScreenStatus] =React.useState(true);
+    const [classs,setClasss]=React.useState();
+    
     const getCharcter = async () => {
       setLoading(true);
       await fetch(`https://swapi.dev/api/species/`)
@@ -13,6 +16,8 @@ const Species = () => {
         .then((responseData) => {
           setCharacter(responseData);
           if(responseData.previous === null) {
+
+
             setPrev(true);
             }
             if(responseData.next === null) {
@@ -25,9 +30,7 @@ const Species = () => {
           console.log(error);
         });
     };
-  
-  
-    const nextCharcater = async (charcter:any) => {
+const nextCharcater = async (charcter:any) => {
       setLoading(true);
       await fetch(charcter.next)
         .then((response) => response.json())

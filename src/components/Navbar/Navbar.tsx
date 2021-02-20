@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className={styles.line}></div>
 
         <Router>
-
+         <div className={styles.media}>
           <nav className={styles.nav}>
             <ul className="list">
               <li>
@@ -69,7 +69,7 @@ const Navbar = () => {
            
             </Switch>
           </nav>
-
+          </div>
         </Router>
 
 
