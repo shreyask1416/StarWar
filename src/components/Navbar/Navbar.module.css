@@ -129,7 +129,7 @@
       
    }
   .nav{
-     margin-left: -25%;
+     /* margin-left: -25%; */
 
     
     
@@ -146,7 +146,7 @@
     font-size: 10px;
     width:auto;
     font-weight: 600;
-    margin-left: 50px;
+    margin-left: 5px;
     font-family: 'Open Sans', sans-serif;
     opacity: 0.8;
     overflow: auto;
