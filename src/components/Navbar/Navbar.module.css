@@ -113,48 +113,49 @@
   }
   
  
-  @media (max-width:500px){
+ @media (max-width:500px){
      .Navbar{
        
     }
    .line{
        margin:auto;
        width: 100%;
-       margin-top: 3.5%;
+       margin-top: 5%;
    }
    .lines{
        margin: auto;
        width:100%;
-       margin-top:-1%;
+       margin-top:-4%;
       
    }
+   .media{
+     
+  
+   }
   .nav{
-     /* margin-left: -25%; */
+  margin-left: -15%;
+  overflow-x: auto;
 
-    
-    
   }
- .media{
-     /* width:600px; */
-    
- }
-   .nav a{
+  .nav a{
+  
     text-decoration:none;
     justify-content: space-between;
     color:white;
-    display: inline-flex;
     font-size: 10px;
-    width:auto;
+    margin-left:10px;
     font-weight: 600;
-    margin-left: 5px;
     font-family: 'Open Sans', sans-serif;
     opacity: 0.8;
-    overflow: auto;
-
-
+    overflow-x: auto;
+   overflow-y:hidden;
     
 }
+.selected{
+    background: rgba(0, 168, 255,.5);
+    width: auto;
+    padding: 9px 9px;
     
 }
-
-  
+    }
+ 

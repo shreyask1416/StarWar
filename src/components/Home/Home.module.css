@@ -92,18 +92,19 @@
 }
 @media (max-width:500px){
     .images {
-        grid-template-columns: 1fr 1fr;
-       margin-left:22%;
-       grid-template-rows:repeat(2,80px) ;
-       grid-gap:45px;
-       margin-top: 10%;
-        
-  
+    grid-template-columns: 1fr 1fr;
+    margin-left:16%;
+    grid-template-rows:repeat(2,65px) ;
+    grid-gap:45px;
+    margin-top: 12%;
+    
+    
     }
     .line{
-        width:100%;
-        margin:auto;
+    width:100%;
+    margin:auto;
+    margin-top: 1%;
     }
     
     
-}
+    }

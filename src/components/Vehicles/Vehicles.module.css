@@ -51,7 +51,7 @@
          
        }
        
-       ::-webkit-scrollbar {
+        ::-webkit-scrollbar {
        width: 4px;
        height: 5px;
        }
@@ -66,7 +66,7 @@
        ::-webkit-scrollbar-thumb {
        background:#1B6BA2;
        border-radius: 1px;
-       }
+       } 
        .info h1{
          font-size: 25px;
          text-align:start;
@@ -95,4 +95,44 @@
          color:white;
          text-align: start;
          position: absolute;
+       }
+       @media (max-width:500px){
+        .Vehicles h1{
+          margin-left: 10%;
+        }
+        .button{
+          margin-left: 10%;
+        }
+       .box{
+        background-color: transparent;
+        width: 200px;
+       }
+       .imgs{
+         margin-left: 2%;
+       }
+       .imgs img{
+         height: 150px;
+         width: 220px;
+       }
+       .info{
+         margin-top: 46%;
+         margin-left: 0%;
+         height: 200px;
+         overflow-y: auto;
+         overflow-x: hidden; 
+         position: absolute;
+         width: 240px;
+       }
+      
+     
+       .info h1{
+         margin-left: 2%;
+         line-height: 25px;
+       }
+      ::-webkit-scrollbar{
+      
+       display: none;
+      }
+    
+       
        }

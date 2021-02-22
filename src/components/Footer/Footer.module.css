@@ -39,23 +39,33 @@
 
 @media (max-width:500px){
     .line2 {
-        margin-top: -40%;
-        
-  
+    margin-top: -35%;
+    
+    
     }
     .Foo img{
-        visibility: hidden;
+    visibility: hidden;
     }
     .fooo{
-        justify-content: space-between;
-        margin-left: 12%;
         position: absolute;
-        margin-top: 2%;
+        justify-content: space-between;
+        margin-left: 5%;
+      
     }
     .fooo h1{
-        display: inline-flex;
-        font-size: 7px;
-        width: 141px;
+        margin-left: 15px;
+        font-size: 9px;
+        display: inline;
+        color:#1B6BA2 ;
+        font-weight:700;
+        width: 150px;
+       
+
+    }
+    .Foo p{
+        margin-top: 5%;
+        position: absolute;
+        margin-left: 23%;
     }
     
-}
+    }
