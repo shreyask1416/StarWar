@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+.Films{
+  margin-top: 40px;
+  margin-left: 4.5%;
+  position: absolute;
+}
 .Films h1{
   color:white;
   text-transform:uppercase;
@@ -8,14 +13,16 @@
   font-family: 'Open Sans', sans-serif;
   line-height: 22px;
   cursor: pointer;
+ 
+
 }
 .box{
   height:320px;
-  width:690px;
+  width:680px;
   background-color:rgba(117, 140, 255,0.2);
   /* opacity:0.2; */
   box-sizing: border-box;
-  margin-left: 25%;
+  margin-left: -7%;
   /* overflow-y: scroll; */
  
 }
@@ -23,9 +30,9 @@
   height: 240px;
   overflow-y:auto;
   overflow-x: hidden;
-  margin-top: 3%;
+  margin-top: 4%;
   position: absolute;
-  margin-left: 21%;
+  margin-left: 41%;
   width: 360px;
   
 }
@@ -53,7 +60,7 @@ border-radius: 1px;
 .imgs{
   position: absolute;
   margin-left: 4%;
-  margin-top:3% ;
+  margin-top:6% ;
 }
 .imgs img{
  
@@ -81,7 +88,8 @@ border-radius: 1px;
     margin-left: 10%;
   }
   .button{
-    margin-left: 10%;
+  
+
   }
  .box{
   background-color: transparent;
@@ -95,7 +103,7 @@ border-radius: 1px;
    width: 220px;
  }
  .info{
-   margin-top: 46%;
+   margin-top: 86%;
    margin-left: 0%;
    height: 200px;
    overflow-y: auto;
@@ -107,7 +115,7 @@ border-radius: 1px;
 
  .info h1{
    margin-left: 2%;
-   line-height: 25px;
+   line-height: 20px;
  }
 ::-webkit-scrollbar{
 

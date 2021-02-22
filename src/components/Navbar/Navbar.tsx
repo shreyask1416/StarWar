@@ -31,7 +31,6 @@ const Navbar = () => {
          <div className={styles.media}>
           <nav className={styles.nav}>
             <ul className="list">
-              
               <li>
                 <NavLink exact activeClassName={styles.selected} className="Films" to="/Navbar/Films">FILMS</NavLink>
               </li>
@@ -52,6 +51,7 @@ const Navbar = () => {
               </li>
 
             </ul>
+            </nav>
             <div className={styles.lines}></div>
 
             <Switch>
@@ -69,7 +69,7 @@ const Navbar = () => {
               </Route>
            
             </Switch>
-          </nav>
+         
           </div>
         </Router>
 

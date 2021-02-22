@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+.Species{
+  margin-top: 40px;
+  margin-left: 4.5%;
+  position: absolute;
+}
 .Species h1{
    color:white;
    text-transform:uppercase;
@@ -10,8 +15,8 @@
    cursor:pointer;
 }
 .button {
-   margin-left: 1%;
-   margin-top: 1%;
+   /* margin-left: 1%;
+   margin-top: 1%; */
     }
    .button button {
    background: rgba(0, 168, 255,0.4);
@@ -32,11 +37,11 @@
       }
       .box{
          height:320px;
-         width:690px;
+         width:680px;
          background-color:rgba(117, 140, 255,0.2);
          /* opacity:0.2; */
          box-sizing: border-box;
-         margin-left: 25%;
+         margin-left: -7%;
          /* overflow-y: scroll; */
         
        }
@@ -44,9 +49,9 @@
          height: 240px;
          overflow-y:auto;
          overflow-x: hidden;
-         margin-top: 3%;
+         margin-top: 4%;
          position: absolute;
-         margin-left: 22%;
+         margin-left: 41%;
          width: 360px;
          
        }
@@ -74,7 +79,7 @@
        .imgs{
          position: absolute;
          margin-left: 4%;
-         margin-top:3% ;
+         margin-top:6% ;
        }
        .imgs img{
         
@@ -101,7 +106,8 @@
            margin-left: 10%;
          }
          .button{
-           margin-left: 10%;
+         
+ 
          }
         .box{
          background-color: transparent;
@@ -115,7 +121,7 @@
           width: 220px;
         }
         .info{
-          margin-top: 46%;
+          margin-top: 86%;
           margin-left: 0%;
           height: 200px;
           overflow-y: auto;
@@ -127,7 +133,7 @@
       
         .info h1{
           margin-left: 2%;
-          line-height: 15px;
+          line-height: 20px;
         }
        ::-webkit-scrollbar{
        
