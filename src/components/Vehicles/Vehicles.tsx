@@ -123,7 +123,7 @@ React.useEffect(() => {
              :
              <div className={styles.box} >
                <div className={styles.imgs} onClick={() => setDetailsScreenStatus(true)}>
-               <img src={strship}></img></div>
+               <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
                <div className={styles.info}>
                  <h1>{name} </h1>
                  <h2 className={styles.height}>Model : <span className={styles.hei}> {classs} </span></h2>

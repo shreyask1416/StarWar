@@ -105,7 +105,7 @@ const Films = () => {
               :
               <div className={styles.box} >
               <div className={styles.imgs} onClick={() => setDetailsScreenStatus(true)}>
-              <img src={newhope}></img></div>
+              <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
               <div className={styles.info}>
                 <h1>{title}</h1>
                 <h2 className={styles.height}>Episode Id : <span className={styles.hei}>{epId}</span></h2>

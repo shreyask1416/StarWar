@@ -31,6 +31,7 @@ const Navbar = () => {
          <div className={styles.media}>
           <nav className={styles.nav}>
             <ul className="list">
+              
               <li>
                 <NavLink exact activeClassName={styles.selected} className="Films" to="/Navbar/Films">FILMS</NavLink>
               </li>
