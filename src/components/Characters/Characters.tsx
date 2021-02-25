@@ -87,7 +87,7 @@ React.useEffect(() => {
 </div>}
       {detailsScreenStatus ?
         <div>
-          {Details.map((item: any) => {
+          {!loading && Details.map((item: any) => {
             return (
 
               <h1 onClick={() => {
