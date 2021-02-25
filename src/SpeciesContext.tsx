@@ -10,6 +10,12 @@ export const SpeciesProvider = ({children}: any) => {
     const [birthyear,setBirthYear]=useState()
     const [classs,setClasss]=React.useState();
     const [lang,setLang]=React.useState();
+    const [title,setTitle]=React.useState();
+  const [epId,setEpId]=React.useState();
+  const [director,setDirector]=React.useState();
+  const [producer,setProducer]=React.useState();
+  const [releaseDate,setReleaseDate]=React.useState();
+  const [opening,setOpening]=React.useState();
 return <SpeciesContext.Provider value={{
 name,
 setName,
@@ -28,9 +34,19 @@ setBirthYear,
 classs,
 setClasss,
 lang,
-setLang
-
-
+setLang,
+title,
+setTitle,
+epId,
+setEpId,
+director,
+setDirector,
+producer,
+setProducer,
+releaseDate,
+setReleaseDate,
+opening,
+setOpening
 }}
 >
 {children}

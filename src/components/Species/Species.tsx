@@ -84,8 +84,7 @@ const nextCharcater = async (charcter:any) => {
               {!loading && Details.map((item:any)=>{
                 return(
   
-                  <h1 onMouseDown={() => {
-                   
+                  <h1 onClick={() => {
                     setName(item.name);
                     setClasss(item.classification);
                     setDesignation(item.designation);
