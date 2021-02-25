@@ -1,28 +1,15 @@
 import React,{useState} from "react";
 import styles from "./Starships.module.css";
-import strship from "../../StarWarDesign/Art Assets/Topics/strship.png";
+import {useSpeciesContext} from "../../SpeciesContext";
+import {useHistory} from "react-router-dom";
 const Planets = () => {
-  
   const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const [prev, setPrev] =React.useState(false);
   const [next, setNext] =React.useState(false);
   const [loading, setLoading] = React.useState(true);
-  const [detailsScreenStatus, setDetailsScreenStatus] =React.useState(true);
-  const [name, setName] = useState()
-  const [designation, setDesignation] = useState()
-  const [height, setHeight] = useState()
-  const [haircolor,setHaircolor]=useState()
-  const [skinclr,setSkinclr]=useState()
-  const [eyecolr,setEyecolr]=useState()
-  const [birthyear,setBirthYear]=useState()
-  const [classs,setClasss]=React.useState();
-  const [lang,setLang]=React.useState();
-  const [consumables,setConsumables]=React.useState();
-  const [drive,setDrive]=React.useState();
-  const [mglt,setMglt]=React.useState();
-  const [sclass,setSclass]=React.useState();
-  
+  let history=useHistory();
+  const {setName,setClasss,setMglt,setDrive,setConsumables,setSclass,setDesignation ,setHeight ,setHaircolor, setEyecolr,setSkinclr,setBirthYear,setLang }=useSpeciesContext();
   const getCharcter = async () => {
     setLoading(true);
     await fetch(`https://swapi.dev/api/starships/`)
@@ -90,14 +77,13 @@ React.useEffect(() => {
         {loading && <div className={styles.loading}>
 <h1>Loading ... </h1>
 </div>}
-{detailsScreenStatus ?
+
            <div>
              
             {!loading && Details.map((item:any)=>{
               return(
 
                 <h1 onClick={() => {
-                  setDetailsScreenStatus(false);
                   setName(item.name);
                   setClasss(item.model);
                   setDesignation(item.manufacturer);
@@ -111,6 +97,7 @@ React.useEffect(() => {
                   setDrive(item.hyperdrive_rating);
                   setMglt(item.MGLT);
                   setSclass(item.starship_class);
+                  history.push('/Navbar/Starships/StarshipDetails');
                 }
                 } >{item.name}</h1>
 
@@ -121,28 +108,8 @@ React.useEffect(() => {
 {!next? <button onClick={()=>nextCharcater(charcter)}>Next</button> : <button className={styles.active}>Next</button>}
 </div>
             </div>
-             :
-             <div className={styles.box} >
-               <div className={styles.imgs} onClick={() => setDetailsScreenStatus(true)}>
-               <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
-               <div className={styles.info}>
-                 <h1>{name} </h1>
-                 <h2 className={styles.height}>Model : <span className={styles.hei}> {classs} </span></h2>
-                 <h2 className={styles.height}>Manufacturer: <span className={styles.hei}>{designation} </span></h2>
-                 <h2 className={styles.height}>Cost in Credits : <span className={styles.hei}> {height} </span></h2>
-                 <h2 className={styles.height}>Length : <span className={styles.hei}>{haircolor} </span></h2>
-                 <h2 className={styles.height}>Crew : <span className={styles.hei}> {eyecolr} </span></h2>
-                 <h2 className={styles.height}>Max atmosphering speed : <span className={styles.hei}> {skinclr} </span></h2>
-                 <h2 className={styles.height}>Passengers : <span className={styles.hei}> {birthyear} </span></h2>
-                 <h2 className={styles.height}>Cargo Capacity : <span className={styles.hei}> {lang} </span></h2>
-                 <h2 className={styles.height}>Consumables : <span className={styles.hei}> {consumables} </span></h2>
-                 <h2 className={styles.height}>Hyperdrive Rating : <span className={styles.hei}> {drive} </span></h2>
-                 <h2 className={styles.height}>MGLT : <span className={styles.hei}> {mglt} </span></h2>
-                 <h2 className={styles.height}>Starship class: <span className={styles.hei}> {sclass} </span></h2>
-               </div>
-              
-             </div>
-           }
+             
+           
          </div>
   );
 };

@@ -1,20 +1,13 @@
 import React, { useState } from "react";
 import styles from "./Characters.module.css";
-import yoda from "../../StarWarDesign/Art Assets/Topics/yoda.png";
+import { useSpeciesContext} from "../../SpeciesContext";
+import {useHistory} from 'react-router-dom';
 const Characters = () => {
+  let history=useHistory();
   const [charcter, setCharacter] = React.useState();
-  const [offset, setOffset] = React.useState(5);
-  const [Previouspage, setprevious] = React.useState(true);
   const [Details, setDetails] = React.useState([]);
-  const [name, setName] = useState()
-  const [gender, setGender] = useState()
-  const [height, setHeight] = useState()
-  const [mass,setMass]=useState()
-  const [haircolor,setHaircolor]=useState()
-  const [skinclr,setSkinclr]=useState()
-  const [eyecolr,setEyecolr]=useState()
-  const [birthyear,setBirthYear]=useState()
-  const [detailsScreenStatus, setDetailsScreenStatus] = useState(true);
+  const {setName,setGender,setMass ,setHeight ,setHaircolor, setEyecolr,setSkinclr,setBirthYear,setLang }=useSpeciesContext();
+ 
   const [prev, setPrev] =React.useState(false);
   const [next, setNext] =React.useState(false);
   const [loading, setLoading] = React.useState(true);
@@ -85,13 +78,13 @@ React.useEffect(() => {
        {loading && <div className={styles.loading}>
 <h1>Loading ... </h1>
 </div>}
-      {detailsScreenStatus ?
+     
         <div>
           {!loading && Details.map((item: any) => {
             return (
 
               <h1 onClick={() => {
-                setDetailsScreenStatus(false);
+               
                 setName(item.name)
                 setGender(item.gender)
                 setHeight(item.height)
@@ -100,6 +93,7 @@ React.useEffect(() => {
                 setSkinclr(item.skin_color)
                 setBirthYear(item.birth_year)
                 setEyecolr(item.eye_color)
+                history.push('/Navbar/Characters/CharacterDetails');
               }
               } >{item.name}</h1>
 
@@ -111,23 +105,7 @@ React.useEffect(() => {
 </div> 
          
         </div>
-        :
-        <div className={styles.box} >
-          <div className={styles.imgs} onClick={() => setDetailsScreenStatus(true)}>
-          <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
-          <div className={styles.info}>
-            <h1>{name}</h1>
-            <h2 className={styles.height}>Height : <span className={styles.hei}>{height}</span></h2>
-            <h2 className={styles.height}>Gender : <span className={styles.hei}>{gender}</span></h2>
-            <h2 className={styles.height}>Mass : <span className={styles.hei}>{mass}</span></h2>
-            <h2 className={styles.height}>Hair Color : <span className={styles.hei}>{haircolor}</span></h2>
-            <h2 className={styles.height}>Eye color : <span className={styles.hei}>{eyecolr}</span></h2>
-            <h2 className={styles.height}>Skin Color : <span className={styles.hei}>{skinclr}</span></h2>
-            <h2 className={styles.height}>Birth Year : <span className={styles.hei}>{birthyear}</span></h2>
-          </div>
-         
-        </div>
-      }
+      
     </div>
   );
 };

@@ -19,6 +19,7 @@ const Films = () => {
           if(responseData.previous === null) {
             setPrev(true);
             }
+            
             if(responseData.next === null) {
             setNext(true);
             }

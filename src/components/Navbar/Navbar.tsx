@@ -20,70 +20,88 @@ import Vehicles from '../Vehicles/Vehicles';
 import SpeciesDetails from '../SpeciesDetails';
 import FilmDetails from '../FilmDetails';
 import PlanetDetails from '../PlanetDetails';
+import CharacterDetails from '../CharacterDetails';
+import StarshipDetails from '../StarshipDetails';
+import VehicleDetails from "../VehicleDetailsTsx"
+import VehicleDetailsTsx from '../VehicleDetailsTsx';
 const Navbar = () => {
 
   return (
     <div className={styles.Navbar}>
       <div className={styles.bkg}>
         <div className={styles.logostyle}>
-        <NavLink exact to="/">
-          <img src={logo} />
+          <NavLink exact to="/">
+            <img src={logo} />
           </NavLink>
         </div>
         <div className={styles.line}></div>
 
         <Router>
-         <div className={styles.media}>
-          <nav className={styles.nav}>
-            <ul className="list">
-              <li>
-                <NavLink exact activeClassName={styles.selected} className="Films" to="/Navbar/Films">FILMS</NavLink>
-              </li>
-              <li >
-                <NavLink activeClassName={styles.selected} className="species" to="/Navbar/Species">SPECIES</NavLink>
-              </li>
-              <li>
-                <NavLink activeClassName={styles.selected} className="planets" to="/Navbar/Planets">PLANETS</NavLink>
-              </li>
-              <li>
-                <NavLink exact activeClassName= {styles.selected} className="Character" to="/Navbar/Characters">CHARACTERS</NavLink>
-              </li>
-              <li >
-                <NavLink activeClassName={styles.selected} className="sshp" to="/Navbar/Starships">STARSHIPS</NavLink>
-              </li>
-              <li>
-                <NavLink activeClassName={styles.selected} className="vehi" to="/Navbar/Vehicles">VEHICLES</NavLink>
-              </li>
+          <div className={styles.media}>
+            <nav className={styles.nav}>
+              <ul className="list">
+                <li>
+                  <NavLink to="/Navbar/Films" activeClassName={styles.selected} >FILMS</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/Navbar/Species" activeClassName={styles.selected} >SPECIES</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/Navbar/Planets" activeClassName={styles.selected}>PLANETS</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/Navbar/Characters" activeClassName={styles.selected}>CHARACTERS</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/Navbar/Starships" activeClassName={styles.selected}>STARSHIPS</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/Navbar/Vehicles" activeClassName={styles.selected}>VEHICLES</NavLink>
+                </li>
 
-            </ul>
+              </ul>
             </nav>
             <div className={styles.lines}></div>
 
             <Switch>
-              <Route exact path="/Navbar/Films"><Films />
+              <Route exact path="/Navbar/Films">
+                <Films />
               </Route>
-              <Route exact path="/Navbar/Species"><Species />
+              <Route exact path="/Navbar/Species">
+                <Species />
               </Route>
-              <Route exact path="/Navbar/Planets"><Planets/>
+              <Route exact path="/Navbar/Planets">
+                <Planets />
               </Route>
-              <Route exact path="/Navbar/Characters"><Characters />
+              <Route exact path="/Navbar/Characters">
+                <Characters />
               </Route>
-              <Route exact path="/Navbar/Starships"><Starships/>
+              <Route exact path="/Navbar/Starships">
+                <Starships />
               </Route>
-              <Route exact path="/Navbar/Vehicles"><Vehicles/>
-              </Route>
-    
-              <Route exact path="/Navbar/Species/SpeciesDetails">
-                <SpeciesDetails/>
+              <Route exact path="/Navbar/Vehicles">
+                <Vehicles />
               </Route>
               <Route exact path="/Navbar/Films/FilmDetails">
-                <FilmDetails/>
+                <FilmDetails />
+              </Route>
+              <Route exact path="/Navbar/Species/SpeciesDetails">
+                <SpeciesDetails />
               </Route>
               <Route exact path="/Navbar/Planets/PlanetDetails">
-                <PlanetDetails/>
+                <PlanetDetails />
+              </Route>
+              <Route exact path="/Navbar/Characters/CharacterDetails">
+                <CharacterDetails />
+              </Route>
+              <Route exact path="/Navbar/Starships/StarshipDetails">
+                <StarshipDetails />
+              </Route>
+              <Route exact path="/Navbar/Vehicles/VehicleDetails">
+                <VehicleDetailsTsx/>
               </Route>
             </Switch>
-         
+
           </div>
         </Router>
 
