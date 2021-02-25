@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { SpeciesProvider } from './SpeciesContext';
 
 ReactDOM.render(
   <React.StrictMode>
+    <SpeciesProvider>
     <App />
+    </SpeciesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

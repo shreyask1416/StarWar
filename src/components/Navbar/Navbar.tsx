@@ -17,6 +17,7 @@ import Planets from '../Planets/Planets';
 import Characters from '../Characters/Characters';
 import Starships from '../Starships/Starships';
 import Vehicles from '../Vehicles/Vehicles';
+import SpeciesDetails from '../SpeciesDetails';
 const Navbar = () => {
 
   return (
@@ -68,6 +69,9 @@ const Navbar = () => {
               <Route exact path="/Navbar/Starships"><Starships/>
               </Route>
               <Route exact path="/Navbar/Vehicles"><Vehicles/>
+              </Route>
+              <Route exact path="/Navbar/Species/SpeciesDetails">
+                <SpeciesDetails/>
               </Route>
            
             </Switch>
