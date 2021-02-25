@@ -49,7 +49,7 @@
     .fooo{
         position: absolute;
         justify-content: space-between;
-        margin-left: 5%;
+        margin-left: 4%;
       
     }
     .fooo h1{
@@ -68,4 +68,25 @@
         margin-left: 23%;
     }
     
+    } 
+    @media (min-height:800px){
+    .line2{
+        margin-top: -45%;
     }
+}
+
+/*@media (max-width:768px){
+    .line2{
+        margin-top: -55%;
+         }
+         .Foo img{
+            height: 36px;
+            width: 120px;
+            margin-right:65% ;
+            margin-top: 2%;
+            
+        }
+        .fooo{
+            margin-left:32%;
+        }
+    } */

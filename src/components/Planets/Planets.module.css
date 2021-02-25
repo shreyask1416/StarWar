@@ -14,6 +14,9 @@
    line-height: 22px;
    cursor:pointer;
 }
+.Planets h1:hover {
+  background: rgba(0, 168, 255,.5);
+  }
 .button {
    
     }
@@ -140,4 +143,9 @@
       }
    
        
+       }
+       @media (max-height:570px){
+         .info{
+           height:150px
+         }
        }

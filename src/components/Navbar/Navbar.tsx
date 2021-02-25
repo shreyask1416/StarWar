@@ -23,7 +23,9 @@ const Navbar = () => {
     <div className={styles.Navbar}>
       <div className={styles.bkg}>
         <div className={styles.logostyle}>
+        <NavLink exact to="/">
           <img src={logo} />
+          </NavLink>
         </div>
         <div className={styles.line}></div>
 

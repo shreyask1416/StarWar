@@ -13,9 +13,10 @@
   font-family: 'Open Sans', sans-serif;
   line-height: 22px;
   cursor: pointer;
- 
-
-}
+ }
+ .Films h1:hover{
+  background: rgba(0, 168, 255,.5);
+ }
 .box{
   height:320px;
   width:680px;
@@ -86,6 +87,7 @@ border-radius: 1px;
 @media (max-width:500px){
   .Films h1{
     margin-left: 10%;
+    width: 200px;
   }
   .button{
   
@@ -124,3 +126,8 @@ border-radius: 1px;
 
  
  }
+ @media (max-height:570px){
+  .info{
+    height:150px
+  }
+}

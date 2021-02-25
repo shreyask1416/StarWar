@@ -107,10 +107,10 @@ const nextCharcater = async (charcter:any) => {
   
                 )
               })}
-              {!loading && <div className={styles.button}>
+              <div className={styles.button}>
 {!prev? <button onClick={()=>previousCharcater(charcter)}>Previous</button> : <button className={styles.active}>Previous</button>}
 {!next? <button onClick={()=>nextCharcater(charcter)}>Next</button> : <button className={styles.active}>Next</button>}
-</div> }
+</div> 
               </div>
                :
                <div className={styles.box} >

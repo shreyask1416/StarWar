@@ -108,3 +108,29 @@
     
     
     }
+    /* @media (min-width:768px){
+        .images {
+        grid-template-columns: 3fr 3fr 3fr;
+        margin-left:30%;
+        grid-template-rows:repeat(2,150px) ;
+        grid-gap:45px;
+        margin-top: 12%;
+        
+        
+        }
+        .line{
+        width:50%;
+        margin:auto;
+        margin-top: 1%;
+        }
+        .logostyle img{
+            height:60px;
+            width:120px;
+         
+            margin-top:5%;
+            margin-right:3%;
+        }
+        
+        
+        
+        }    */

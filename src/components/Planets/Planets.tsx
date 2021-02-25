@@ -1,9 +1,7 @@
 import React,{useState} from "react";
 import styles from "./Planets.module.css";
-import planet from "../../StarWarDesign/Art Assets/Topics/planetimg.png";
 const Planets = () => {
-  
-  const [charcter, setCharacter] = React.useState();
+   const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const [prev, setPrev] =React.useState(false);
   const [next, setNext] =React.useState(false);
@@ -18,7 +16,6 @@ const Planets = () => {
   const [birthyear,setBirthYear]=useState()
   const [classs,setClasss]=React.useState();
   const [lang,setLang]=React.useState();
-  
   const getCharcter = async () => {
     setLoading(true);
     await fetch(`https://swapi.dev/api/planets/`)
@@ -26,8 +23,6 @@ const Planets = () => {
       .then((responseData) => {
         setCharacter(responseData);
         if(responseData.previous === null) {
-
-
           setPrev(true);
           }
           if(responseData.next === null) {
@@ -108,10 +103,10 @@ React.useEffect(() => {
 
               )
             })}
-            {!loading && <div className={styles.button}>
+            <div className={styles.button}>
 {!prev? <button onClick={()=>previousCharcater(charcter)}>Previous</button> : <button className={styles.active}>Previous</button>}
 {!next? <button onClick={()=>nextCharcater(charcter)}>Next</button> : <button className={styles.active}>Next</button>}
-</div> }
+</div> 
             </div>
              :
              <div className={styles.box} >
