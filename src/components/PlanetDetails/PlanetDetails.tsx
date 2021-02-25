@@ -1,13 +1,15 @@
 import React from 'react';
 import { useSpeciesContext} from "../../SpeciesContext";
 import styles from './PlanetDetails.module.css';
+import {useHistory} from "react-router-dom"
 
 const PlanetDetails = () => {
+  let history=useHistory();
     const {name,classs,designation,height,haircolor,eyecolr,skinclr,birthyear,lang}=useSpeciesContext();
 return (
 <div className={styles.PlanetDetails }>
 <div className={styles.box} >
-               <div className={styles.imgs}>
+               <div className={styles.imgs} onClick={()=>history.push("/Navbar/Planets") }>
                <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
                <div className={styles.info}>
                  <h1>{name} </h1>

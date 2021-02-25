@@ -79,7 +79,7 @@
     text-align: start;
     position: absolute;
   }
-  @media (max-width:500px){
+  @media (max-width:600px){
     .PlanetDetails h1{
       margin-left: 1%;
     }
@@ -101,7 +101,7 @@
    .info{
      margin-top: 86%;
      margin-left: 0%;
-     height: 200px;
+     height: 170px;
      overflow-y: auto;
      overflow-x: hidden; 
      position: absolute;

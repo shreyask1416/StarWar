@@ -79,7 +79,7 @@
     text-align: start;
     position: absolute;
   }
-  @media (max-width:500px){
+  /* @media (max-width:500px){
     .FilmDetails h1{
       margin-left: 1%;
     }
@@ -116,6 +116,48 @@
   ::-webkit-scrollbar{
   
    display: none;
+  }
+
+   
+   } */
+   @media (max-width:600px){
+    .FilmDetails h1{
+      margin-left: 1%;
+    }
+    .button{
+    
+
+    }
+   .box{
+    background-color: transparent;
+    width: 200px;
+    
+   }
+   .imgs{
+     margin-left: 2%;
+   }
+   .imgs img{
+     height: 150px;
+     width: 220px;
+   }
+   .info{
+     margin-top: 86%;
+     margin-left: 0%;
+     height: 170px;
+     overflow-y: auto;
+     overflow-x: hidden; 
+     position: absolute;
+     width: 240px;
+   }
+  
+ 
+   .info h1{
+     margin-left: 2%;
+     line-height: 20px;
+   }
+  ::-webkit-scrollbar{
+  
+   
   }
 
    
