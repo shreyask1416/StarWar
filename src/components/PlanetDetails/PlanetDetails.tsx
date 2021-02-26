@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useSpeciesContext} from "../../SpeciesContext";
 import styles from './PlanetDetails.module.css';
 import {useHistory} from "react-router-dom"
@@ -6,11 +6,25 @@ import {useHistory} from "react-router-dom"
 const PlanetDetails = () => {
   let history=useHistory();
     const {name,classs,designation,height,haircolor,eyecolr,skinclr,birthyear,lang}=useSpeciesContext();
+    const [img,setImg]=useState<any>();
+    const getImage=()=>{
+      if(sessionStorage.getItem(`${name}imgs`)){
+         setImg(sessionStorage.getItem(`${name}imgs`)||'{}')
+      }
+      else{
+      const url="https://picsum.photos/200/300/?random&cb=" + (+new Date()) + "";
+      setImg(url);
+      sessionStorage.setItem(`${name}imgs`,url);
+      }
+    }
+    React.useEffect(() => {
+      getImage();
+    }, [name]);
 return (
 <div className={styles.PlanetDetails }>
 <div className={styles.box} >
                <div className={styles.imgs} onClick={()=>history.push("/Navbar/Planets") }>
-               <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
+               <img src={img}></img></div>
                <div className={styles.info}>
                  <h1>{name} </h1>
                  <h2 className={styles.height}>Rotation Period : <span className={styles.hei}> {classs} </span></h2>

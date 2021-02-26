@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import styles from './StarshipDetails.module.css';
 import {useHistory} from "react-router-dom";
@@ -6,11 +6,25 @@ import {useSpeciesContext} from "../../SpeciesContext";
 const StarshipDetails = () => {
   let history=useHistory();
   const {name,classs,designation,lang,consumables,drive,mglt,sclass,height,haircolor,eyecolr,skinclr,birthyear}=useSpeciesContext();
+  const [img,setImg]=useState<any>();
+  const getImage=()=>{
+    if(sessionStorage.getItem(`${name}imgs`)){
+       setImg(sessionStorage.getItem(`${name}imgs`)||'{}')
+    }
+    else{
+    const url="https://picsum.photos/200/300/?random&cb=" + (+new Date()) + "";
+    setImg(url);
+    sessionStorage.setItem(`${name}imgs`,url);
+    }
+  }
+  React.useEffect(() => {
+    getImage();
+  }, [name]);
 return (
 <div className={styles.StarshipDetails }>
 <div className={styles.box} >
                <div className={styles.imgs} onClick={()=>history.push("/Navbar/Starships")}>
-               <img src={"https://picsum.photos/200/300/?random&cb=" + (+new Date()) + ""}></img></div>
+               <img src={img}></img></div>
                <div className={styles.info}>
                  <h1>{name} </h1>
                  <h2 className={styles.height}>Model : <span className={styles.hei}> {classs} </span></h2>
