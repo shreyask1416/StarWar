@@ -89,7 +89,7 @@
      font-family: 'Open Sans', sans-serif;
      opacity: 0.8;
  }
- /* @media (max-width:500px){
+ @media (width:360px ){
     .Navbar{
       
    }
@@ -130,8 +130,50 @@
    padding: 9px 9px;
    
 }
-   } */
-   @media (max-width:600px){
+   }
+   @media (height:640px ){
+    .Navbar{
+      
+   }
+  .line{
+      margin:auto;
+      width: 100%;
+      margin-top: 5%;
+     
+  }
+  .lines{
+      margin: auto;
+      width:100%;
+      margin-top:9%;
+      
+     
+  }
+  .media{
+    overflow-x: scroll;
+ 
+  }
+ .nav{
+
+ overflow-x: scroll;
+ justify-content: space-between;
+ margin-top: -3%;
+
+
+
+
+ }
+ .nav li{
+     margin-left:22px ;
+     
+ }
+.selected{
+   background: rgba(0, 168, 255,.5);
+   width: auto;
+   padding: 9px 9px;
+   
+}
+   }
+   @media (width:500px){
     .Navbar{
       
    }

@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
 import styles from './SpeciesDetails.module.css';
 import { useSpeciesContext} from "../../SpeciesContext";
+import {useHistory} from "react-router-dom";
 
 const SpeciesDetails = () => {
+  let history=useHistory();
     const {name,classs,designation,height,haircolor,eyecolr,skinclr,birthyear,lang}=useSpeciesContext();
     const [img,setImg]=useState<any>();
     const getImage=()=>{
@@ -19,7 +21,7 @@ const SpeciesDetails = () => {
       getImage();
     }, [name]);
 return (
-<div className={styles.SpeciesDetails }>
+<div className={styles.SpeciesDetails } onClick={()=>history.push("/Navbar/Species") } >
 <div className={styles.box} >
                  <div className={styles.imgs}>
                  <img src={img}></img></div>
