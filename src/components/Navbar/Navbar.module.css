@@ -215,3 +215,42 @@
    
 }
    }
+   @media screen and (min-width:501px) and (max-width:1100px){
+    .Navbar{
+      
+    }
+   .line{
+       margin:auto;
+       width: 100%;
+       margin-top: 5%;
+      
+   }
+   .lines{
+       margin: auto;
+       width:100%;
+       margin-top:6%;
+       
+      
+   }
+   .media{
+     overflow-x: scroll;
+  
+   }
+  .nav{
+ 
+  overflow-x: scroll;
+  justify-content: space-between;
+  margin-top: -3%;
+ 
+  }
+  .nav li{
+      margin-left:22px ;
+      
+  }
+ .selected{
+    background: rgba(0, 168, 255,.5);
+    width: auto;
+    padding: 9px 9px;
+    
+ }
+        }
