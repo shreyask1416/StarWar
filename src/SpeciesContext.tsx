@@ -22,6 +22,7 @@ export const SpeciesProvider = ({ children }: any) => {
   const [drive, setDrive] = React.useState();
   const [mglt, setMglt] = React.useState();
   const [sclass, setSclass] = React.useState();
+  const [allDetails, setAllDetails]=useState();
   return <SpeciesContext.Provider value={{
     name,
     setName,
@@ -61,7 +62,7 @@ export const SpeciesProvider = ({ children }: any) => {
     setConsumables,
     drive,setDrive,
     mglt,setMglt,
-    sclass,setSclass
+    sclass,setSclass,allDetails,setAllDetails
   }}
   >
     {children}

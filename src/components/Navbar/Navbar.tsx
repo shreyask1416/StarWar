@@ -64,6 +64,24 @@ const Navbar = () => {
             <div className={styles.lines}></div>
 
             <Switch>
+              <Route path="/Navbar/Films/:id">
+                <FilmDetails url={'http://swapi.dev/api/films/'} />
+              </Route>
+              <Route path="/Navbar/Species/:id">
+                <SpeciesDetails url={'http://swapi.dev/api/species/'} />
+              </Route>
+              <Route path="/Navbar/Planets/:id">
+                <PlanetDetails url={'http://swapi.dev/api/planets/'} />
+              </Route>
+              <Route path="/Navbar/Characters/:id">
+                <CharacterDetails url={'http://swapi.dev/api/people/'} />
+              </Route>
+         <Route path="/Navbar/Starships/:id">
+<StarshipDetails url={'http://swapi.dev/api/starships/'}/>
+</Route>
+<Route path="/Navbar/Vehicles/:id">
+<VehicleDetails url={'http://swapi.dev/api/vehicles/'}/>
+</Route> 
               <Route exact path="/Navbar/Films">
                 <Films />
               </Route>
@@ -82,24 +100,7 @@ const Navbar = () => {
               <Route exact path="/Navbar/Vehicles">
                 <Vehicles />
               </Route>
-              <Route exact path="/Navbar/Films/FilmDetails">
-                <FilmDetails />
-              </Route>
-              <Route exact path="/Navbar/Species/SpeciesDetails">
-                <SpeciesDetails />
-              </Route>
-              <Route exact path="/Navbar/Planets/PlanetDetails">
-                <PlanetDetails />
-              </Route>
-              <Route exact path="/Navbar/Characters/CharacterDetails">
-                <CharacterDetails />
-              </Route>
-              <Route exact path="/Navbar/Starships/StarshipDetails">
-                <StarshipDetails />
-              </Route>
-              <Route exact path="/Navbar/Vehicles/VehicleDetails">
-                <VehicleDetailsTsx/>
-              </Route>
+
             </Switch>
 
           </div>

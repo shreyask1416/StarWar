@@ -1,13 +1,14 @@
 import React,{useState} from "react";
 import styles from "./Starships.module.css";
 import {useSpeciesContext} from "../../SpeciesContext";
-import {useHistory} from "react-router-dom";
+import {useHistory, useRouteMatch, Switch, Route, NavLink} from 'react-router-dom';
 const Planets = () => {
   const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const [prev, setPrev] =React.useState(false);
   const [next, setNext] =React.useState(false);
   const [loading, setLoading] = React.useState(true);
+  const {url} = useRouteMatch();
   let history=useHistory();
   const {setName,setClasss,setMglt,setDrive,setConsumables,setSclass,setDesignation ,setHeight ,setHaircolor, setEyecolr,setSkinclr,setBirthYear,setLang }=useSpeciesContext();
   const getCharcter = async () => {
@@ -81,23 +82,11 @@ React.useEffect(() => {
            <div>
              
             {!loading && Details.map((item:any)=>{
+              const id = item.url.split('/');
               return(
 
                 <h1 onClick={() => {
-                  setName(item.name);
-                  setClasss(item.model);
-                  setDesignation(item.manufacturer);
-                  setHeight(item.cost_in_credits);
-                  setHaircolor(item.length);
-                  setEyecolr(item.max_atmosphering_speed);
-                  setSkinclr(item.crew);
-                  setBirthYear(item.passengers);
-                  setLang(item.cargo_capacity);
-                  setConsumables(item.consumables);
-                  setDrive(item.hyperdrive_rating);
-                  setMglt(item.MGLT);
-                  setSclass(item.starship_class);
-                  history.push('/Navbar/Starships/StarshipDetails');
+                  history.push(`${url}/${id[5]}`)
                 }
                 } >{item.name}</h1>
 

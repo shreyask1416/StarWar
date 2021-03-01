@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import styles from "./Species.module.css";
 import species from "../../StarWarDesign/Art Assets/Topics/species.png";
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch, Switch, Route, NavLink} from 'react-router-dom';
 import { useSpeciesContext} from "../../SpeciesContext";
 const Species = () => {
     const [charcter, setCharacter] = React.useState();
@@ -11,6 +11,7 @@ const Species = () => {
     const [loading, setLoading] = React.useState(true);
     const {setName,setClasss, setDesignation, setHeight ,setHaircolor, setEyecolr,setSkinclr,setBirthYear,setLang }=useSpeciesContext();
     let history=useHistory();
+    const {url} = useRouteMatch();
     const getCharcter = async () => {
       setLoading(true);
       await fetch(`https://swapi.dev/api/species/`)
@@ -82,19 +83,11 @@ const nextCharcater = async (charcter:any) => {
              <div>
                
               {!loading && Details.map((item:any)=>{
+                 const id = item.url.split('/');
                 return(
   
                   <h1 onClick={() => {
-                    setName(item.name);
-                    setClasss(item.classification);
-                    setDesignation(item.designation);
-                    setHeight(item.average_height);
-                    setHaircolor(item.hair_colors);
-                    setEyecolr(item.eye_colors);
-                    setSkinclr(item.skin_colors);
-                    setBirthYear(item.average_lifespan);
-                    setLang(item.language);
-                    history.push('/Navbar/Species/SpeciesDetails');
+                    history.push(`${url}/${id[5]}`)
                   }
                   } >{item.name}</h1>
   

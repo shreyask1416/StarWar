@@ -1,15 +1,16 @@
 import React,{useState} from "react";
 import styles from "./Planets.module.css";
 import { useSpeciesContext} from "../../SpeciesContext";
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch, Switch, Route, NavLink} from 'react-router-dom';
 const Planets = () => {
   let history=useHistory();
+  const {url} = useRouteMatch();
    const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const [prev, setPrev] =React.useState(false);
   const [next, setNext] =React.useState(false);
   const [loading, setLoading] = React.useState(true);
-  const {setName,setClasss, setDesignation, setHeight ,setHaircolor, setEyecolr,setSkinclr,setBirthYear,setLang }=useSpeciesContext();
+
   const getCharcter = async () => {
     setLoading(true);
     await fetch(`https://swapi.dev/api/planets/`)
@@ -79,20 +80,12 @@ React.useEffect(() => {
            <div>
              
             {!loading && Details.map((item:any)=>{
+               const id = item.url.split('/');
               return(
 
                 <h1 onClick={() => {
+                  history.push(`${url}/${id[5]}`)
                  
-                  setName(item.name);
-                  setClasss(item.rotation_period);
-                  setDesignation(item.orbital_period);
-                  setHeight(item.diameter);
-                  setHaircolor(item.climate);
-                  setEyecolr(item.gravity);
-                  setSkinclr(item.terrain);
-                  setBirthYear(item.surface_water);
-                  setLang(item.population);
-                  history.push('/Navbar/Planets/PlanetDetails');
                 }
                 } >{item.name}</h1>
 

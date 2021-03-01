@@ -1,15 +1,14 @@
 import React,{useState,useEffect} from "react";
 import styles from "./Films.module.css";
 import { useSpeciesContext} from "../../SpeciesContext";
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch, Switch, Route, NavLink} from 'react-router-dom';
 const Films = () => {
   const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const [prev, setPrev] =React.useState(false);
   const [next, setNext] =React.useState(false);
-  const [loading, setLoading] = React.useState(true);
-  const {setTitle,setEpId,setOpening,setDirector,setProducer,setReleaseDate,title }=useSpeciesContext();
   let history=useHistory();
+  const {url} = useRouteMatch();
     const getCharcter = async () => {
     
       if(sessionStorage.getItem('films')){
@@ -43,23 +42,13 @@ const Films = () => {
     }, []);
     return (
         <div className={styles.Films}>
-            {/* {loading && <div className={styles.loading}>
-<h1>Loading ... </h1>
-</div>} */}
-
-             <div>
+          <div>
               {Details.map((item:any)=>{
+                const id = item.url.split('/');
                 return(
   
                   <h1 onClick={() => {
-                   
-                    setTitle(item.title);
-                    setEpId(item.episode_id);
-                    setDirector(item.director);
-                    setProducer(item.producer);
-                    setReleaseDate(item.release_date);
-                    setOpening(item.opening_crawl);
-                    history.push('/Navbar/Films/FilmDetails');
+                    history.push(`${url}/${id[5]}`)
                   }
                   } >{item.title}</h1>
   

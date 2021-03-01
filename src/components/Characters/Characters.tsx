@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Characters.module.css";
 import { useSpeciesContext} from "../../SpeciesContext";
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch, Switch, Route, NavLink} from 'react-router-dom';
 const Characters = () => {
   let history=useHistory();
+  const {url} = useRouteMatch();
   const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const {setName,setGender,setMass ,setHeight ,setHaircolor, setEyecolr,setSkinclr,setBirthYear,setLang }=useSpeciesContext();
@@ -81,19 +82,11 @@ React.useEffect(() => {
      
         <div>
           {!loading && Details.map((item: any) => {
+            const id = item.url.split('/');
             return (
 
               <h1 onClick={() => {
-               
-                setName(item.name)
-                setGender(item.gender)
-                setHeight(item.height)
-                setMass(item.mass)
-                setHaircolor(item.hair_color)
-                setSkinclr(item.skin_color)
-                setBirthYear(item.birth_year)
-                setEyecolr(item.eye_color)
-                history.push('/Navbar/Characters/CharacterDetails');
+                history.push(`${url}/${id[5]}`)
               }
               } >{item.name}</h1>
 

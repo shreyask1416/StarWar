@@ -1,9 +1,10 @@
 import React,{useState} from "react";
 import styles from "./Vehicles.module.css";
-import {useHistory} from "react-router-dom";
+import {useHistory, useRouteMatch, Switch, Route, NavLink} from "react-router-dom";
 import {useSpeciesContext} from "../../SpeciesContext";
 const Vehicles = () => {
   let history=useHistory();
+  const {url} = useRouteMatch();
   const [charcter, setCharacter] = React.useState();
   const [Details, setDetails] = React.useState([]);
   const [prev, setPrev] =React.useState(false);
@@ -82,21 +83,11 @@ React.useEffect(() => {
            <div>
              
             {!loading && Details.map((item:any)=>{
+               const id = item.url.split('/');
               return(
 
                 <h1 onClick={() => {
-                  setName(item.name);
-                  setClasss(item.model);
-                  setDesignation(item.manufacturer);
-                  setHeight(item.cost_in_credits);
-                  setHaircolor(item.length);
-                  setEyecolr(item.max_atmosphering_speed);
-                  setSkinclr(item.crew);
-                  setBirthYear(item.passengers);
-                  setLang(item.cargo_capacity);
-                  setConsumables(item.consumables);
-                  setDrive(item.vehicle_class);
-                  history.push('/Navbar/Vehicles/VehicleDetails');
+                  history.push(`${url}/${id[5]}`)
                 }
                 } >{item.name}</h1>
 

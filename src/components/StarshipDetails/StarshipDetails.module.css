@@ -118,5 +118,20 @@
    display: none;
   }
 
-   
+  .height{
+    font-size: 12px;
+    color:#A5C1D3;
+    opacity: 0.7;
+    font-family: 'Open Sans', sans-serif;
+    text-align: start;
+    font-weight: 400;
+    line-height: 23px;
+    
+  }
+  .hei{
+    color:white;
+    text-align: start;
+    position: absolute;
+    
+  }
    }
