@@ -17,7 +17,7 @@ const FilmDetails = ({ url }: any) => {
       const url = "https://picsum.photos/200/300/?random&cb=" + (+new Date()) + "";
       setImg(url);
       sessionStorage.setItem(`${id}imgs`, url);
-      console.log("fetch");
+      console.log(shreya,"fetch");
     }
   }
   useEffect(() => {
